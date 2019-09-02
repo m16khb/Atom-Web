@@ -24,20 +24,28 @@
   <div id="grid">
     <ol>
       <div class="button">
-        <input type="button" value="night" onclick="document.querySelector('body').style.backgroundColor = 'black';
-        document.querySelector('body').style.color = 'white';
-        var ancor = document.querySelectorAll('a')
-        for(var i =0; i<ancor.length;i++)
-        {
-          ancor.item(i).style.color='white';
-        }">
-        <input type="button" value="day" onclick="document.querySelector('body').style.backgroundColor = 'white';
-        document.querySelector('body').style.color = 'black';
-        var ancor = document.querySelectorAll('a')
-        for(var i =0; i<ancor.length;i++)
-        {
-          ancor.item(i).style.color='black';
-        }">
+        <input id="night_day" type="button" value="night" onclick="
+          if (document.querySelector('#night_day').value === 'night'){
+            document.querySelector('body').style.backgroundColor = 'black';
+            document.querySelector('body').style.color = 'white';
+            var ancor = document.querySelectorAll('a');
+            for(var i =0; i<ancor.length;i++)
+            {
+              ancor.item(i).style.color='white';
+            }
+            document.querySelector('#night_day').value = 'day';
+          }
+          else{
+            document.querySelector('body').style.backgroundColor = 'white';
+            document.querySelector('body').style.color = 'black';
+            var ancor = document.querySelectorAll('a');
+            for(var i =0; i<ancor.length;i++)
+            {
+              ancor.item(i).style.color='black';
+            }
+            document.querySelector('#night_day').value = 'night';
+          }
+        ">
       </div>
       <p>
         <li><a href="1.html">HTML</a></li>
