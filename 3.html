@@ -29,20 +29,20 @@
           if (this.value === 'night'){
             target.style.backgroundColor = 'black';
             target.style.color = 'white';
-            var ancor = document.querySelectorAll('a');
-            for(var i =0; i<ancor.length;i++)
+            var links = document.querySelectorAll('a');
+            for(var i =0; i<links.length;i++)
             {
-              ancor.item(i).style.color='white';
+              links[i].style.color='white';
             }
             this.value = 'day';
           }
           else{
             target.style.backgroundColor = 'white';
             target.style.color = 'black';
-            var ancor = document.querySelectorAll('a');
-            for(var i =0; i<ancor.length;i++)
+            var links = document.querySelectorAll('a');
+            for(var i =0; i<links.length;i++)
             {
-              ancor.item(i).style.color='black';
+              links[i].style.color='black';
             }
           this.value = 'night';
           }
